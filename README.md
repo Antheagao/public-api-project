@@ -1,3 +1,4 @@
+# Weather API Server
 ## How to run the server
 - npm install
 - nodemon index.js
