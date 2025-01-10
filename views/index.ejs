@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html leng="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/main.css">
+        <title> Weather data </title>
+    </head>
+
+    <body>
+        <div class="container">
+            
+            <div class="big-box">
+                <% if (locals.error) { %>
+                    <h1 class="error-message"> <%= error %> </h1>
+                <% } else { %>
+                    <h1 class="title"> Check Your Weather </h1>
+                <% } %>
+                <form action="/" method="POST">
+                    <input 
+                        type="text" 
+                        name="city" 
+                        placeholder="Enter your city..." required
+                    >
+                    <button type="submit"> Get Weather </button>
+                </form>
+                
+            </div>
+            <div class="small-box-container">
+                <div class="small-box">
+                     <h1> Location <br/> <hr/> <%= location || "N/A" %> </h1> 
+                </div>
+                <div class="small-box"> 
+                    <h1> Temperature <br/> <hr/> <%= temp || "N/A" %> f</h1>
+                </div>
+                <div class="small-box"> 
+                    <h1> Condition <br/> <hr/> <%= condition || "N/A" %> </h1>
+                </div>
+                <div class="small-box"> 
+                    <h1> Wind <br/> <hr/> <%= wind || "N/A" %> mph </h1>
+                </div>
+            </div>
+        </div> 
+    </body>
+
+</html>
+
