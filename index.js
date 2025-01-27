@@ -4,7 +4,7 @@ import axios from "axios";
 // Declare and initialize variables
 const app = express();
 const port = 3000;
-const API_KEY = "959f66e4788a4f5498530817250901";
+const API_KEY = PROCESS.ENV.API_KEY;
 const API_URL = "https://api.weatherapi.com/v1/current.json";
 
 // Set middleware
